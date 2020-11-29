@@ -1,8 +1,9 @@
+@import _mixin.sass
 $gray-light: hsl(0, 0%, 63%)
 $gray-dark: hsl(0, 0%, 27%)
 $black: hsl(0, 0%, 0%)
 $white: hsl(0, 0%, 100%)
-    
+
 *
     margin: 0
     padding: 0
@@ -45,7 +46,7 @@ header
 
 #menu-switch
     display: none
-    &:checked 
+    &:checked
         + header
             background-color: $white
             .menu-btn
@@ -63,14 +64,33 @@ header
                 width: 100%
 
 main
-    .content-box
-        position: absolute
-        z-index: -1
+    @include breakpoint(desktop)
+        height: 65vh
+    .content
+        &-wrapper
+            height: 100%
+        &-box
+            position: absolute
+            z-index: -1
+            @include breakpoint(desktop)
+                display: flex
+                height: 100%
+    .main-hero
+        @include breakpoint(desktop)
+            width: 60%
+            height: 100%
+        img
+            @include breakpoint(desktop)
+                height: 100%
 
 .content
     position: relative
     padding: 35px 25px
     background-color: $white
+    @include breakpoint(desktop)
+        width: 40%
+        height: 100%
+        padding: 100px
     h3,
     h4
         padding: 10px 0
@@ -78,11 +98,16 @@ main
         font-size: 1.6rem
         font-weight: 600
         color: $black
+        @include breakpoint(desktop)
+            font-size: 2rem
     h4
         line-height: 1.2rem
         font-size: .8rem
         font-weight: 500
         color: $gray-light
+        @include breakpoint(desktop)
+            line-height: 1.6rem
+            font-size: .9rem
 
 .btn.shopNow
     display: inline-block
@@ -102,6 +127,9 @@ main
     display: flex
     width: 120px
     height: 50px
+    @include breakpoint(desktop)
+        top: 59.2%
+        left: 60%
     button
         width: 50%
         border: none
@@ -117,3 +145,21 @@ main
     top: 0
     left: 0
     z-index: 1
+
+footer
+    @include breakpoint(desktop)
+        height: 35vh
+        .content
+            padding: 40px 30px
+            h3
+                font-size: 1.5rem
+            h4
+                font-size: .7rem
+            &-box
+                display: flex
+                height: 100%
+                > div
+                    flex: 1
+        img
+            height: 100%
+        
