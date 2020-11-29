@@ -70,11 +70,7 @@ main
         &-wrapper
             height: 100%
         &-box
-            position: absolute
-            z-index: -1
-            @include breakpoint(desktop)
-                display: flex
-                height: 100%
+            display: none
     .main-hero
         @include breakpoint(desktop)
             width: 60%
@@ -90,7 +86,7 @@ main
     @include breakpoint(desktop)
         width: 40%
         height: 100%
-        padding: 100px
+        padding: 80px
     h3,
     h4
         padding: 10px 0
@@ -98,16 +94,11 @@ main
         font-size: 1.6rem
         font-weight: 600
         color: $black
-        @include breakpoint(desktop)
-            font-size: 2rem
     h4
         line-height: 1.2rem
         font-size: .8rem
         font-weight: 500
         color: $gray-light
-        @include breakpoint(desktop)
-            line-height: 1.6rem
-            font-size: .9rem
 
 .btn.shopNow
     display: inline-block
@@ -121,14 +112,14 @@ main
 
 .content-btn-group
     position: absolute
-    top: 45.6%
+    top: 27.7%
     right: 0
     z-index: 999
     display: flex
     width: 120px
     height: 50px
     @include breakpoint(desktop)
-        top: 59.2%
+        top: 57.6%
         left: 60%
     button
         width: 50%
@@ -141,20 +132,20 @@ main
             outline: none
 
 .content-box.is-active
-    position: relative
-    top: 0
-    left: 0
-    z-index: 1
+    display: block
+    @include breakpoint(desktop)
+        display: flex
+        height: 100%
 
 footer
     @include breakpoint(desktop)
         height: 35vh
         .content
-            padding: 40px 30px
+            padding: 20px 40px
             h3
-                font-size: 1.5rem
+                font-size: 1rem
             h4
-                font-size: .7rem
+                font-size: .5rem
             &-box
                 display: flex
                 height: 100%
@@ -162,4 +153,3 @@ footer
                     flex: 1
         img
             height: 100%
-        
