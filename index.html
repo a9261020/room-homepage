@@ -11,6 +11,12 @@
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/static/css/style.min.css" />
 
         <title>Frontend Mentor | Room homepage</title>
 
@@ -27,9 +33,12 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="main-bg">
-                <h1>Logo</h1>
-                <input type="checkbox" />
+            <input type="checkbox" id="menu-switch" />
+            <header>
+                <label for="menu-switch">
+                    <div class="menu-btn"></div>
+                    <!-- <img src="/images/icon-hamburger.svg" alt="" /> -->
+                </label>
                 <nav>
                     <ul>
                         <li>Home</li>
@@ -38,63 +47,136 @@
                         <li>Contact</li>
                     </ul>
                 </nav>
-            </div>
-            <div class="main-content">
-                <main class="main-title">
-                    Discover innovative ways to decorate
-                </main>
-                <p class="sub-title">
-                    We provide unmatched quality, comfort, and style for
-                    property owners across the country. Our experts combine form
-                    and function in bringing your vision to life. Create a room
-                    in your own style with our collection and make your property
-                    a reflection of you and what you love.
-                </p>
-                <main class="main-title">
-                    We are available all across the globe
-                </main>
-                <div class="sub-title">
-                    With stores all over the world, it's easy for you to find
-                    furniture for your home or place of business. Locally, we’re
-                    in most major cities throughout the country. Find the branch
-                    nearest you using our store locator. Any questions? Don't
-                    hesitate to contact us today.
+                <h1>
+                    <img src="/images/logo.svg" alt="" />
+                </h1>
+            </header>
+            <main>
+                <div class="content-wrapper">
+                    <div class="content-box is-active">
+                        <div class="main-hero">
+                            <img src="/images/mobile-image-hero-1.jpg" alt="" />
+                        </div>
+                        <div class="content">
+                            <h3>Discover innovative ways to decorate</h3>
+                            <h4>
+                                We provide unmatched quality, comfort, and style
+                                for property owners across the country. Our
+                                experts combine form and function in bringing
+                                your vision to life. Create a room in your own
+                                style with our collection and make your property
+                                a reflection of you and what you love.
+                            </h4>
+                            <a href="/" class="btn shopNow">
+                                SHOP NOW
+                                <span>
+                                    <img src="/images/icon-arrow.svg" alt="" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="main-hero">
+                            <img src="/images/mobile-image-hero-2.jpg" alt="" />
+                        </div>
+                        <div class="content">
+                            <h3>We are available all across the globe</h3>
+                            <h4>
+                                With stores all over the world, it's easy for
+                                you to find furniture for your home or place of
+                                business. Locally, we’re in most major cities
+                                throughout the country. Find the branch nearest
+                                you using our store locator. Any questions?
+                                Don't hesitate to contact us today.
+                            </h4>
+                            <a href="/" class="btn shopNow">
+                                SHOP NOW
+                                <span>
+                                    <img src="/images/icon-arrow.svg" alt="" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="main-hero">
+                            <img src="/images/mobile-image-hero-3.jpg" alt="" />
+                        </div>
+                        <div class="content">
+                            <h3>Manufactured with the best materials</h3>
+                            <h4>
+                                Our modern furniture store provide a high level
+                                of quality. Our company has invested in advanced
+                                technology to ensure that every product is made
+                                as perfect and as consistent as possible. With
+                                three decades of experience in this industry, we
+                                understand what customers want for their home
+                                and office.
+                            </h4>
+                            <a href="/" class="btn shopNow">
+                                SHOP NOW
+                                <span>
+                                    <img src="/images/icon-arrow.svg" alt="" />
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-btn-group">
+                        <button>
+                            <svg
+                                width="14"
+                                height="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M13 0L1 12l12 12"
+                                    stroke="#FFF"
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                />
+                            </svg>
+                        </button>
+                        <button>
+                            <svg
+                                width="14"
+                                height="24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1 0l12 12L1 24"
+                                    stroke="#FFF"
+                                    fill="none"
+                                    fill-rule="evenodd"
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-                <main class="main-title">
-                    Manufactured with the best materials
-                </main>
-                <div class="sub-title">
-                    Our modern furniture store provide a high level of quality.
-                    Our company has invested in advanced technology to ensure
-                    that every product is made as perfect and as consistent as
-                    possible. With three decades of experience in this industry,
-                    we understand what customers want for their home and office.
-                </div>
-                <button class="btn shopNow">Shop now</button>
-            </div>
-            <div class="sub-bg"></div>
-            <div class="sub-content">
-                <div class="main-title">About our furniture</div>
-                <div class="sub-title">
-                    Our multifunctional collection blends design and function to
-                    suit your individual taste. Make each room unique, or pick a
-                    cohesive theme that best express your interests and what
-                    inspires you. Find the furniture pieces you need, from
-                    traditional to contemporary styles or anything in between.
-                    Product specialists are available to help you create your
-                    dream space.
-                </div>
-            </div>
-            <div class="sub-bg"></div>
-        </div>
+            </main>
 
-        <div class="attribution">
-            Challenge by
-            <a
-                href="https://www.frontendmentor.io?ref=challenge"
-                target="_blank"
-                >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+            <footer>
+                <div class="content-box">
+                    <div class="sub-hero">
+                        <img src="/images/image-about-dark.jpg" alt="" />
+                    </div>
+                    <div class="content">
+                        <h3>About our furniture</h3>
+                        <h4>
+                            Our multifunctional collection blends design and
+                            function to suit your individual taste. Make each
+                            room unique, or pick a cohesive theme that best
+                            express your interests and what inspires you. Find
+                            the furniture pieces you need, from traditional to
+                            contemporary styles or anything in between. Product
+                            specialists are available to help you create your
+                            dream space.
+                        </h4>
+                    </div>
+                    <div class="sub-hero">
+                        <img src="/images/image-about-light.jpg" alt="" />
+                    </div>
+                </div>
+            </footer>
         </div>
+        <script src="/script.js"></script>
     </body>
 </html>
