@@ -61,6 +61,8 @@ header
             width: 100%
             color: $white
     li
+        border-bottom: 1px solid transparent
+        transition: all .3s ease-in-out
         @include breakpoint(desktop)
             padding: 5px
             cursor: pointer
@@ -145,6 +147,7 @@ main
         border: none
         font-size: 0
         background-color: $black
+        cursor: pointer
         &:hover
             background-color: $gray-light
         &:focus
